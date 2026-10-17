@@ -1,4 +1,4 @@
-name : test
+honame : test
 on : workflow_dispatch
 jobs :
   first-job :
@@ -12,6 +12,6 @@ jobs :
     runs-on: ubuntu-latest
     steps :
        - name : one-step 
-         run : "one step"
+         run : echo "one step"
        - name : two-step
-         run : "two step"
+         run : echo "two step"
