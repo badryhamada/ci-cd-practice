@@ -1,4 +1,4 @@
-honame : test
+name : test
 on : workflow_dispatch
 jobs :
   first-job :
