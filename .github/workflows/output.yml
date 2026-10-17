@@ -1,0 +1,16 @@
+name: output information
+on: workflow_dispatch #event == trigger
+jobs:
+    info: 
+        runs-on : ubuntu-latest
+        steps : 
+            - name : output github context # information about workflow
+              run : echo "${toJson{github}}"
+              
+
+ 
+      
+    
+  
+
+
