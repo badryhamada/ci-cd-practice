@@ -5,7 +5,7 @@ jobs:
         runs-on : ubuntu-latest
         steps : 
             - name : output github context # information about workflow
-              run : echo "${toJson{github}}"
+              run : echo "${toJSON{github}}"
               
 
  
