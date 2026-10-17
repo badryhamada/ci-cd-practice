@@ -1,0 +1,17 @@
+name : test
+on : workflow_dispatch
+jobs :
+  first-job :
+    runs-on: ubuntu-latest
+    steps :
+      - name : one-step
+        run : echo "Hello"
+      - name : two-step
+        run : echo "Badry" 
+  secound-job :
+    runs-on: ubuntu-latest
+    steps :
+       - name : one-step 
+         run : "one step"
+       - name : two-step
+         run : "two step"
