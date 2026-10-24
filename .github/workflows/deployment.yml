@@ -16,6 +16,7 @@ jobs:
         
       - name: install depandencies
         run: npm ci 
+        working-directory: ./02_Starting_Project
 
       - name : tests  
         run : npm test 
@@ -27,7 +28,7 @@ jobs:
       contents: read
       pages: write
       id-token: write
-      
+
     steps:
       - name: git code from github repo
         uses: actions/checkout@v7
@@ -39,6 +40,7 @@ jobs:
         
       - name: install depandencies
         run: npm ci 
+        working-directory: ./02_Starting_Project
 
       - name: Bulid Project
         run: npm run build
