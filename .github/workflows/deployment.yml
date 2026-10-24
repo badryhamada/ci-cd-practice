@@ -54,7 +54,7 @@ jobs:
       - name: upload pages artifact 
         uses: actions/upload-pages-artifact@v3  
         with:
-          path: ./02_Starting_Project/disk
+          path: ./02_Starting_Project/dist
 
       - name : deploy to github pages 
         uses : actions/deploy-pages@v4 
