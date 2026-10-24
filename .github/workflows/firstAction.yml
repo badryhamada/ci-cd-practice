@@ -13,6 +13,31 @@ jobs:
               echo "Badry"
       
     
-  
+#what learning 
+# name: 
+# on: #event
+
+# jobs:
+#   bulid: #name-job
+#     runs-on: #machine
+#     steps: 
+#       - name: #name-step
+#         run:  #shell script / uses: actions
+    
+#   test:
+#   needs: bulid  # need run first  job before it 
+#   runs-on: 
+#     steps:
+#       - name:
+#         run:
+
+
+
+#   deploy: 
+#     needs: [build , test]
+#     steps:
+#       - name:
+#         run: 
+
 
 
