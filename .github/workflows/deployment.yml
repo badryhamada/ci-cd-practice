@@ -20,6 +20,7 @@ jobs:
 
       - name : tests  
         run : npm test 
+        working-directory: ./02_Starting_Project
 
   deploy: 
     needs : test # deploy dependent test (run first ) [ , , ,] more
