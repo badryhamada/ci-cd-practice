@@ -23,12 +23,19 @@ jobs:
         working-directory: ./02_Starting_Project
 
   deploy: 
-    needs : test # deploy dependent test (run first ) [ , , ,] more
+    needs : test # deploy dependent test (run first ) [ , , ,] more    
     runs-on : ubuntu-latest 
+
     permissions:
       contents: read
       pages: write
       id-token: write
+    
+    environment:
+      name: github-pages
+      url: "${{steps.deployment.outputs.page_url}}" 
+
+
 
     steps:
       - name: git code from github repo
@@ -57,6 +64,7 @@ jobs:
           path: ./02_Starting_Project/dist
 
       - name : deploy to github pages 
+        id: deployment
         uses : actions/deploy-pages@v4 
 
 
