@@ -1,5 +1,7 @@
 name: deployment
 on: push
+permissions:
+  contents: read
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -13,7 +15,7 @@ jobs:
           node-version: 22 
         
       - name: install depandencies
-        run: npm install 
+        run: npm ci 
 
       - name : tests  
         run : npm test 
@@ -21,6 +23,11 @@ jobs:
   deploy: 
     needs : test # deploy dependent test (run first ) [ , , ,] more
     runs-on : ubuntu-latest 
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+      
     steps:
       - name: git code from github repo
         uses: actions/checkout@v7
